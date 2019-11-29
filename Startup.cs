@@ -8,6 +8,7 @@ using Microsoft.AspNetCore.HttpsPolicy;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
+using Westwind.AspNetCore.LiveReload;
 
 namespace ecommerce_sample
 {
@@ -24,6 +25,10 @@ namespace ecommerce_sample
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddRazorPages();
+            services.AddLiveReload(config =>
+            {
+
+            });
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
@@ -39,6 +44,8 @@ namespace ecommerce_sample
                 // The default HSTS value is 30 days. You may want to change this for production scenarios, see https://aka.ms/aspnetcore-hsts.
                 app.UseHsts();
             }
+
+            app.UseLiveReload();
 
             app.UseHttpsRedirection();
             app.UseStaticFiles();

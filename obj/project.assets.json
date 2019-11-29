@@ -1,11 +1,40 @@
 {
   "version": 3,
   "targets": {
-    ".NETCoreApp,Version=v3.0": {}
+    ".NETCoreApp,Version=v3.0": {
+      "Westwind.AspnetCore.LiveReload/0.1.12": {
+        "type": "package",
+        "compile": {
+          "lib/netcoreapp3.0/Westwind.AspnetCore.LiveReload.dll": {}
+        },
+        "runtime": {
+          "lib/netcoreapp3.0/Westwind.AspnetCore.LiveReload.dll": {}
+        },
+        "frameworkReferences": [
+          "Microsoft.AspNetCore.App"
+        ]
+      }
+    }
   },
-  "libraries": {},
+  "libraries": {
+    "Westwind.AspnetCore.LiveReload/0.1.12": {
+      "sha512": "zFUlJS6pRUKt5l7kxdApBcfPxkgloFrYVRFqFZY6MY/2Bjq1S5A/14NRtB3e9f0aZgak8OladX/9pCQ9/LYsUQ==",
+      "type": "package",
+      "path": "westwind.aspnetcore.livereload/0.1.12",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "lib/netcoreapp2.1/Westwind.AspnetCore.LiveReload.dll",
+        "lib/netcoreapp3.0/Westwind.AspnetCore.LiveReload.dll",
+        "westwind.aspnetcore.livereload.0.1.12.nupkg.sha512",
+        "westwind.aspnetcore.livereload.nuspec"
+      ]
+    }
+  },
   "projectFileDependencyGroups": {
-    ".NETCoreApp,Version=v3.0": []
+    ".NETCoreApp,Version=v3.0": [
+      "WestWind.AspnetCore.LiveReload >= 0.1.12"
+    ]
   },
   "packageFolders": {
     "C:\\Users\\kirtan.chhatbar\\.nuget\\packages\\": {},
@@ -45,6 +74,12 @@
     },
     "frameworks": {
       "netcoreapp3.0": {
+        "dependencies": {
+          "WestWind.AspnetCore.LiveReload": {
+            "target": "Package",
+            "version": "[0.1.12, )"
+          }
+        },
         "imports": [
           "net461",
           "net462",
