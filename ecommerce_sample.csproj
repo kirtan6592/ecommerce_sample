@@ -8,4 +8,9 @@
   <ItemGroup>
   </ItemGroup>
 
+
+  <ItemGroup>
+    <PackageReference Include="WestWind.AspnetCore.LiveReload" Version="0.1.12" />
+  </ItemGroup>
+
 </Project>
